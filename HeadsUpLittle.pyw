@@ -42,20 +42,20 @@ def call():
 
   
 
-R1=Radiobutton(root, text="sb_open_2_5", variable=bigblinds, value=1, command=call)
+R1=Radiobutton(root, text="1", variable=bigblinds, value=1, command=call)
 R1.grid(row=1, column=0, sticky=N+E)
-R2=Radiobutton(root, text="bb_3bet_10", variable=bigblinds, value=2, command=call)
+R2=Radiobutton(root, text="2", variable=bigblinds, value=2, command=call)
 R2.grid(row=2, column=0, sticky=N+E)
-R3=Radiobutton(root, text="bb_call_2_5", variable=bigblinds, value=3, command=call)
+R3=Radiobutton(root, text="3", variable=bigblinds, value=3, command=call)
 R3.grid(row=3, column=0, sticky=N+E)
-R4=Radiobutton(root, text="sb_4bet", variable=bigblinds, value=4, command=call)
+R4=Radiobutton(root, text="4", variable=bigblinds, value=4, command=call)
 R4.grid(row=4, column=0, sticky=N+E)
-R5=Radiobutton(root, text="sb_calls_3bet", variable=bigblinds, value=5, command=call)
+R5=Radiobutton(root, text="5", variable=bigblinds, value=5, command=call)
 R5.grid(row=5, column=0, sticky=N+E)
-R6=Radiobutton(root, text="pushfold", variable=bigblinds, value=6, command=call)
+R6=Radiobutton(root, text="6", variable=bigblinds, value=6, command=call)
 R6.grid(row=6, column=0, sticky=N+E)
 
-canvas = Canvas(root, height=455, width=480,)
+canvas = Canvas(root, height=600, width=700,)
 canvas.grid(column=5, row=0, rowspan=6, sticky=W)
 canvas.create_image((2, 2), image=sb_calls_3bet, anchor=NW)
 
