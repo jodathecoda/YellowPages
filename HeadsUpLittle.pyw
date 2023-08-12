@@ -1,6 +1,7 @@
 import os
 from tkinter import *
-from PIL import ImageTk,Image  
+from PIL import ImageTk,Image
+import random
 
 global cwd
 cwd = os.getcwd()
@@ -61,7 +62,12 @@ def call():
         canvas.create_image(0, 0, anchor=NW, image=image)
         canvas.config(scrollregion=canvas.bbox(ALL))
 
-  
+def randomizer():
+   #rnd = random.uniform(1.0,99.9)
+    rnd = random.randint(1,100)
+    input_text.set(str(rnd)[0:5] + "%")
+
+input_text = StringVar()
 
 R1=Radiobutton(root, text="open", variable=bigblinds, value=1, command=call)
 R1.grid(row=1, column=0, sticky=N+E)
@@ -75,8 +81,13 @@ R5=Radiobutton(root, text="call_3bet", variable=bigblinds, value=5, command=call
 R5.grid(row=5, column=0, sticky=N+E)
 R6=Radiobutton(root, text="push<10bb", variable=bigblinds, value=6, command=call)
 R6.grid(row=6, column=0, sticky=N+E)
+
 R7=Radiobutton(root, text="call<10bb", variable=bigblinds, value=7, command=call)
 R7.grid(row=7, column=0, sticky=N+E)
+
+B7 = Button(root, text = "RAND", fg = "black", width = 15, height = 3, bd = 0, bg = "yellow", cursor = "hand2", command = lambda: randomizer()).grid(row = 7, column = 1, columnspan = 5, padx = 1, pady = 1)
+I7 = Entry(root, font=('arial', 18, 'bold'), textvariable=input_text, width=50, bg="#eee", bd=0, justify=RIGHT)
+I7.grid(row = 6, column = 2, columnspan = 5, padx = 1, pady = 1)
 
 canvas = Canvas(root, height=600, width=700,)
 canvas.grid(column=5, row=0, rowspan=6, sticky=W)
