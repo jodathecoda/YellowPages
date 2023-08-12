@@ -87,7 +87,7 @@ R7.grid(row=7, column=0, sticky=N+E)
 
 B7 = Button(root, text = "RAND", fg = "black", width = 15, height = 3, bd = 0, bg = "yellow", cursor = "hand2", command = lambda: randomizer()).grid(row = 7, column = 1, columnspan = 5, padx = 1, pady = 1)
 I7 = Entry(root, font=('arial', 18, 'bold'), textvariable=input_text, width=50, bg="#eee", bd=0, justify=RIGHT)
-I7.grid(row = 6, column = 2, columnspan = 5, padx = 1, pady = 1)
+I7.grid(row = 6, column = 1, columnspan = 5, padx = 1, pady = 1)
 
 canvas = Canvas(root, height=600, width=700,)
 canvas.grid(column=5, row=0, rowspan=6, sticky=W)
